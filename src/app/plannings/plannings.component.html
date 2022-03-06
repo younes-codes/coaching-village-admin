@@ -1,8 +1,0 @@
-<app-loader *ngIf="isLoading"></app-loader>
-
-<div *ngIf="!isLoading">
-  <h2>plannings</h2>
-  <div *ngFor="let group of groups">
-    <app-planning [planning]="getPlanning(group)"></app-planning>
-  </div>
-</div>

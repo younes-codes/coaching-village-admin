@@ -1,6 +1,6 @@
 <app-loader *ngIf="isLoading"></app-loader>
 <div *ngIf="!isLoading">
-  <h2>{{user.firstname}}</h2>
+  <h2>{{user.firstName}}</h2>
   <p>Groupe {{user.group}}</p>
   <app-planning [group]="user.group" [planning]="planning"></app-planning>
 </div>

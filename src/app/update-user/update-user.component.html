@@ -1,6 +1,6 @@
 <app-loader *ngIf="isLoading"></app-loader>
 <div *ngIf="user">
-  <h2>Modifier {{user.firstname}}</h2>
+  <h2>Modifier {{user.firstName}}</h2>
 
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <div class="input-container">
@@ -14,17 +14,19 @@
     </div>
     <div class="input-container">
       <label for="firstname">Prénom</label>
-      <input type="text" name="firstname" id="firstname" placeholder="prenom" [(ngModel)]="user.firstname">
+      <input type="text" name="firstname" id="firstname" placeholder="prenom"
+             [(ngModel)]="user.firstName">
     </div>
     <div class="input-container">
       <label for="lastname">Nom de famille</label>
-      <input type="text" name="lastname" id="lastname" placeholder="nom de famille" [(ngModel)]="user.lastname"
+      <input type="text" name="lastname" id="lastname" placeholder="nom de famille"
+             [(ngModel)]="user.lastName"
       >
     </div>
     <div class="input-container">
       <label for="dateOfBirth">Date de naissance</label>
       <input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="date de naissance"
-             [(ngModel)]="user.lastname">
+             [(ngModel)]="user.lastName">
     </div>
     <div class="input-container">
       <label for="height">Taille en cm</label>
