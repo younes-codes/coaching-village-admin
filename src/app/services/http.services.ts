@@ -17,24 +17,25 @@ export class HttpServices {
 
   createEmptySessions(userId: string) {
     return this.http.post
-    ('http://localhost:3000/sessions/create-sessions',
+    (`${environment.urlAPI}/sessions/create-sessions`,
       {sessions: EMPTY_SESSIONS, userId}
     );
   }
 
   createUser(user: User) {
     return this.http.post<{ userId: string, user: User }>
-    ('http://localhost:3000/admin/create-user', {user})
+    (`${environment.urlAPI} / admin / create - user`, {user})
   }
 
+
   editUser(user: User) {
-    return this.http.put('http://localhost:3000/admin/edit-user/' + user._id, {user});
+    return this.http.put(`${environment.urlAPI} / admin / edit - user / user._id`, {user});
   }
 
 
   fetchUsers() {
     return this.http
-      .get<User>(`${environment.urlAPI}/admin/users`)
+      .get<User>(`${environment.urlAPI} / admin / users`)
       .pipe(map((fetchedPosts: User) => {
         // Transform Object to an Array
         return Object.values(fetchedPosts);
@@ -42,6 +43,6 @@ export class HttpServices {
   }
 
   deleteUserById(id: string) {
-    return this.http.delete(`${environment.urlAPI}/admin/delete-user/${id}`);
+    return this.http.delete(`${environment.urlAPI} / admin / delete -user /${id}`);
   }
 }
