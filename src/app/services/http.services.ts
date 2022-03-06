@@ -42,6 +42,6 @@ export class HttpServices {
   }
 
   deleteUserById(id: string) {
-    return this.http.delete('http://localhost:3000/admin/delete-user/' + id);
+    return this.http.delete(`${environment.urlAPI}/admin/delete-user/${id}`);
   }
 }
