@@ -29,7 +29,7 @@ export class HttpServices {
 
 
   editUser(user: User) {
-    return this.http.put(`${environment.urlAPI}/admin/edit-user/user._id`, {user});
+    return this.http.put(`${environment.urlAPI}/admin/edit-user/${user._id}`, {user});
   }
 
 
