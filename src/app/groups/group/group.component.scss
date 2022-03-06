@@ -1,0 +1,15 @@
+:host {
+  h2 {
+    margin-top: 20px;
+    position: sticky;
+    top: 27.5px;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      top: 100px;
+    }
+  }
+}

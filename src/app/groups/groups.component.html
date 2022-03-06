@@ -1,0 +1,3 @@
+<div *ngFor="let group of groups; let i = index">
+  <app-group [groupNumber]="group" [users]="getUsersByGroup(group)"></app-group>
+</div>

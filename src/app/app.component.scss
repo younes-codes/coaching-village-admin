@@ -1,0 +1,18 @@
+h1 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px 0;
+  background-color: rgb(46, 105, 203);
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  z-index: 998;
+
+  span {
+    color: #e8ad18;
+  }
+}

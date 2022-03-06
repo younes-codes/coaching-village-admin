@@ -1,0 +1,31 @@
+<div class="daily-program-container" *ngIf="planning">
+  <h2>Groupe {{planning.group}}</h2>
+  <ul class="daily-program">
+    <li *ngFor="let program of planning.days">
+      <div
+        class="container-img"
+        [ngStyle]="{'background-image': 'url(./assets/' + getDayInFr(program.day) + '.jpg)'}"
+      >
+        <h3>{{getDayInFr(program.day)}}</h3>
+      </div>
+      <div class="morning">
+        <h4>matin</h4>
+        <ul>
+          <li *ngFor="let morning of program.morning">
+            <h5>{{morning.session}}</h5>
+            <p>{{morning.time}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="morning">
+        <h4>après-midi</h4>
+        <ul>
+          <li *ngFor="let afternoon of program.afternoon">
+            <h5>{{afternoon.session}}</h5>
+            <p>{{afternoon.time}}</p>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

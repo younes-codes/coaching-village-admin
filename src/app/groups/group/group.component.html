@@ -1,0 +1,27 @@
+<h2>Groupe {{groupNumber}}</h2>
+
+<div class="users-container">
+  <ul>
+    <li *ngFor="let user of users" class="users">
+      <h3>{{user.firstname}}</h3>
+      <div class="buttons">
+        <button
+          (click)="openUserById(user._id)"
+          class="btn open"
+        >
+          <img src="./assets/open.svg" alt="open">
+        </button>
+        <button
+          (click)="editUserById(user._id)"
+          class="btn modifier"
+        ><img src="./assets/edit.svg" alt="edit">
+        </button>
+        <button
+          (click)="deleteUserById(user._id)"
+          class="btn delete">
+          <img src="./assets/delete.svg" alt="delete">
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>

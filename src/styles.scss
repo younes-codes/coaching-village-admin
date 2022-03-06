@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;500;700;800&display=swap');
+
+$blue: rgb(46, 105, 203);
+$orange: #e8ad18;
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #343434;
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.center {
+  display: block;
+  text-align: center;
+}
+
+h2 {
+  margin: 70px auto 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.submit {
+  display: flex;
+  background-color: #2e69cb;
+  border: aliceblue;
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+
+  &:hover {
+    transition: .2s;
+    background-color: rgba(46, 105, 203, .9);
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 5px;
+  max-height: 30px;
+}
+
+.delete {
+  background-color: $orange;
+}
+
+.modifier {
+  background-color: #12811b;
+}
+
+.open {
+  background-color: $blue;
+}
+
+
+form {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+
+  label {
+    padding-left: 5px;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  input {
+    border: 2px solid;
+    border-radius: 2px;
+    padding-left: 5px;
+  }
+
+  .submit {
+    margin-top: 50px;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      height: 30px;
+    }
+  }
+}
+
+.no-users {
+  font-weight: bold;
+  color: #cb174d;
+  text-align: center;
+}
+
+.users-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+
+  ul {
+    width: 100%;
+
+    li {
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+
+      h3 {
+        width: 120px;
+        text-align: left;
+        margin-left: 10px;
+        font-weight: 600;
+      }
+
+      p {
+        margin: auto;
+      }
+    }
+
+    li:nth-child(odd) {
+      background-color: lightgray;
+    }
+  }
+
+  .buttons {
+    display: flex;
+  }
+}

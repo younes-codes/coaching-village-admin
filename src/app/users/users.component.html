@@ -1,0 +1,33 @@
+<app-loader *ngIf="isLoading"></app-loader>
+
+<div *ngIf="!isLoading">
+  <p *ngIf="!users.length" class="no-users">No users</p>
+  <div class="users-container" *ngIf="users.length">
+    <h2>Les utilisateurs</h2>
+    <ul>
+      <li *ngFor="let user of users; let i = index;">
+        <h3>{{i + 1}} - {{user.firstname}}</h3>
+        <p>Groupe {{user.group}}</p>
+        <div class="buttons">
+          <button
+            (click)="openUserById(user._id)"
+            class="btn open"
+          >
+            <img src="./assets/open.svg" alt="open">
+          </button>
+          <button
+            (click)="editUserById(user._id)"
+            class="btn modifier"
+          ><img src="./assets/edit.svg" alt="edit">
+          </button>
+          <button
+            (click)="deleteUserById(user._id)"
+            class="btn delete"
+          >
+            <img src="./assets/delete.svg" alt="delete">
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
